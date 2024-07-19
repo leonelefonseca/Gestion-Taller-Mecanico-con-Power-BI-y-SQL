@@ -1,24 +1,24 @@
 
 # Dashboard para la Gestión de un Taller de Mantenimiento en la Industria Siderúrgica  
 
-Con esta herramienta, creada utilizando SQL Server y Power BI, se evalua el desempeño de los equipos que componen la Máquina de Colada Continua (MCC) y que son reparados en este Taller de Mantenimiento, teniendo en cuenta los eventos externos que los afectan, las acciones correctivas que se les realizan y las alteraciones operativas que generan durante la operación en la MCC. También se muestran las causas de fallas más frecuentes y las soluciones a estas problemáticas.
+Con esta herramienta, creada utilizando SQL Server y Power BI, se evalúa el desempeño de los equipos que componen la Máquina de Colada Continua (MCC) y que se reparan en el Taller de Mantenimiento, teniendo en cuenta los eventos externos que los afectan, las acciones correctivas que se les realizan y las alteraciones operativas que generan durante la operación en la MCC. También se muestran las causas de fallas más frecuentes y las soluciones a estas problemáticas.
 De esta manera se participa en la gestión de Mantenimiento del Taller con el objetivo final de aumentar la vida en servicio de los equipos y/o su confiabilidad durante la operación.
 
 
 ## Tabla de Contenidos
 
-- [Introducción](#introduccion)
-    - [Planteo del Problema](#planteodelproblema)
+- [Introducción](#introducción)
+    - [Planteo del Problema](#planteo-del-problema)
     - [Stakeholders](#stakeholders)
     - [Requerimientos](#requerimientos)
-    - [Criterios de Aceptación](#criteriosdeaceptacion)
+    - [Criterios de Aceptación](#criterios-de-aceptación)
 - [Desarrollo](#desarrollo)
     - [Prerrequisitos](#prerrequisitos)
-    - [Instalación](#instalacion)
-    - [Análisis de datos con SSMS](#analisisdedatosconssms)
-    - [Modelo Analítico de datos](#modeloanaliticodedatos)
+    - [Instalación](#instalación)
+    - [Análisis de datos con SSMS](#análisis-de-datos-con-ssms)
+    - [Modelo Analítico de datos](#modelo-analítico-de-datos)
 - [Screenshots](#screenshots)
-- [Otros Recursos](#Otrosrecursos)
+- [Otros Recursos](#otros-recursos)
 - [Autor](#autores)
 
 
@@ -28,9 +28,9 @@ La creación de este dashboard surge debido a la necesidad de mejorar los report
 
 ### Planteo del problema
 
-Se necesita contar con un panorama general de la gestión del taller, donde se muestre la vida en servicio promedio de equipos en comparación con la vida programada y la vida teórica de manual. Además, se requiere evaluar el cumplimiento del presupuesto en relación a la cantidad de cambios de equipos estimados por año fiscal.
+Se necesita contar con un panorama general de la gestión de mantenimiento del Taller, donde se muestre la vida en servicio promedio de equipos en comparación con la vida programada y la vida teórica de manual. Además, se requiere evaluar el cumplimiento del presupuesto en relación a la cantidad estimada de cambios de equipos por año fiscal.
 
-Así también resulta importante poder evaluar la cantidad (disponibilidad) y la calidad de las reparaciones realizadas en el taller a través de la medición de las alteraciones operativas generadas por un incorrecto funcionamiento de estos equipos, de los eventos externos que los afectaron y de las intervenciones de mantenimiento realizadas sobre éstos durante su operación en la MCC.
+Así también resulta importante poder evaluar la cantidad (disponibilidad) y la calidad de las reparaciones realizadas en el Taller a través de la medición de las alteraciones operativas generadas por un incorrecto funcionamiento de estos equipos, de los eventos externos que los afectaron y de las intervenciones de mantenimiento realizadas sobre éstos durante su operación en la MCC.
 
 Por último, se requiere visualizar los distintos tipos de fallas encontradas, cuáles fueron las más relevantes y qué acciones se tomaron para remediarlas con el objetivo final de aumentar la vida en servicio de los equipos y/o su confiabilidad.
 
@@ -43,7 +43,7 @@ Por último, se requiere visualizar los distintos tipos de fallas encontradas, c
 ### Requerimientos
 
 - Gerente del Área:
-    - Un dashboard con la performance general del taller que permita evaluar la vida media alcanzada, el cumplimiento del presupuesto y la calidad de reparaciones.
+    - Un dashboard con la performance general del Taller que permita evaluar la vida media alcanzada, el cumplimiento del presupuesto y la calidad de reparaciones.
 
 - Jefe del Taller:
     - Un detalle de las alteraciones operativas generadas por los equipos que son reparados en el Taller que permita determinar los tipos de alteraciones más relevantes, las posiciones de la máquina más afectadas y los grupos de equipos críticos.
@@ -78,10 +78,10 @@ Se necesita contar con:
 
 ### Instalación
     
-- Descargar el archivo `Mantenimientos.bacpac` con el esquema y los datos de la base de datos.
-- Importar la base de datos en SSMS haciendo click derecho sobre `Databases` y elegir `Import Data-tier Application...` del menú desplegable.
+- Descargar el archivo [Mantenimientos.bacpac](https://github.com/leonelefonseca/Gestion-Taller-de-Mantenimiento-con-Power-BI-y-SQL/blob/main/Mantenimientos.bacpac) con el esquema y los datos de la base de datos.
+- Importar la base de datos en SSMS haciendo click derecho sobre *"Databases"* y elegir *"Import Data-tier Application..."* del menú desplegable.
 
-### Análisis de datos usando SSMS
+### Análisis de datos con SSMS
 
 En la base de datos se observa lo siguiente:
 - Las tablas obtenidas de la base de datos del cliente. 
@@ -91,25 +91,27 @@ En la base de datos se observa lo siguiente:
 
 ### Modelo Analítico de Datos
 
-- Se conecta Power BI con las vistas generadas en SSMS y se confecciona el modelo analítico de datos del tipo Header Details.
+- Se conecta Power BI con las vistas generadas en SSMS y se confecciona el modelo analítico de datos del tipo Header-Detail.
 ![Model](/images/ModeloAnalitico1.png)
 
 
 ## Screenshots
 
-![Dashboard Screenshot](/images/Screenshots/1.General.png)
-![Dashboard Screenshot](/images/Screenshots/2.AlteracionesOperativas.png)
-![Dashboard Screenshot](/images/Screenshots/3.EventosExternos.png)
-![Dashboard Screenshot](/images/Screenshots/4.IntervencionesDeMantenimiento.png)
-![Dashboard Screenshot](/images/Screenshots/5.Disponibilidad.png)
-![Dashboard Screenshot](/images/Screenshots/6.ABCDeFallas.png)
-![Dashboard Screenshot](/images/Screenshots/7.PropuestasDeMejora.png)
+A continuación se observan las capturas de pantallas del reporte.
+
+![Dashboard Screenshot](images/Screenshots/1-General.png)
+![Dashboard Screenshot](/images/Screenshots/2-AlteracionesOperativas.png)
+![Dashboard Screenshot](/images/Screenshots/3-EventosExternos.png)
+![Dashboard Screenshot](/images/Screenshots/4-IntervencionesDeMantenimiento.png)
+![Dashboard Screenshot](/images/Screenshots/5-Disponibilidad.png)
+![Dashboard Screenshot](/images/Screenshots/6-ABCDeFallas.png)
+![Dashboard Screenshot](/images/Screenshots/7-PropuestasDeMejora.png)
 
 
 ## Otros Recursos
 
-- [readme.so](https://readme.so)
-- [keepachangelog.com](https://keepachangelog.com/es-ES/1.1.0/)
+- [Readme.so](https://readme.so)
+- [Keepachangelog.com](https://keepachangelog.com/es-ES/1.1.0/)
 - [Versionado Semántico](https://semver.org/lang/es/)
 - [Storytelling With Data](https://www.storytellingwithdata.com/)
 

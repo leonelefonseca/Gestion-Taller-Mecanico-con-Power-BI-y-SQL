@@ -10,19 +10,12 @@ SELECT
 	e.Id
 	,CAST(e.Fecha AS DATE) FechaEvento
 	,ec.Descripcion
-	--2724,e.Linea
-	,e.Observaciones
-	--2724,c.Identificador
-	,c.Id IdCampania
-	--2724,c.IdSegmento
-	--2724,CAST(c.FechaSegmentoInstalado AS DATE) FechaSegmentoInstalado
-	--2724,CAST(c.FechaSegmentoRetirado AS DATE) FechaSegmentoRetirado
-	--2724,c.PosicionEnLinea
+	,e.IdCampania AS IdCampania
 FROM
 	[dbo].[tbEventosExternos] e
 	LEFT JOIN [dbo].[tbTipoEventoCausa] ec
 		ON e.IdTipoEvento = ec.Id
-	LEFT JOIN [dbo].[vCampania] c
+	LEFT JOIN [dbo].[tbCampania] c
 		ON e.IdCampania = c.Id
 WHERE c.Id IS NOT NULL
 GO

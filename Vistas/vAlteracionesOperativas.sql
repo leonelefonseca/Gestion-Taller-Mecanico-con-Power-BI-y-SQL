@@ -9,12 +9,7 @@ AS
 SELECT 
 	ao.Id
 	,ao.IdCampania
-	,c.Identificador
-	--2724,c.IdSegmento
-	--2724,c.Linea
-	--2724,c.PosicionEnLinea
 	,ec.Descripcion
-	--,ao.Observaciones
 	,CASE WHEN ao.Observaciones like ' - '
 		THEN 'Sin datos'
 		ELSE SUBSTRING(ao.Observaciones, 1, CHARINDEX('-', ao.Observaciones)-1)
@@ -27,9 +22,6 @@ SELECT
 	,ao.Duracion
 FROM 
 	[dbo].[tbCampaniaAlteracionesOperativas] ao
-	LEFT JOIN [dbo].[vCampania] c
-		ON c.Id = ao.IdCampania
 	LEFT JOIN [dbo].[tbTipoEventoCausa] ec
 		ON ao.IdTipoEventoCausa = ec.Id
-WHERE c.Id is not null
 GO

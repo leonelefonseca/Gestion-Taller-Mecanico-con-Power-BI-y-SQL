@@ -8,23 +8,18 @@ CREATE VIEW dbo.vIntervencionesMantenimiento
 AS
 SELECT 
 	im.Id
-	--2724,IdComponente
-	--2724,co.Identificador as nombreComponente
-	,co.NombreFamilia
-	--2724,im.IdSegmento
+	,f.Nombre AS NombreFamilia
 	,im.IdCampania
-	--2724,c.Identificador
-	--2724,im.Linea
-	--2724,im.PosicionEnLinea
 	,CAST(Fecha AS DATE) Fecha
-	,Observaciones
 FROM 
 	[dbo].[tbCampaniaIntervencionesMantenimiento] im
-	LEFT JOIN [dbo].[vCampania] c
+	LEFT JOIN [dbo].[tbCampania] c
 		ON im.IdCampania = c.Id
-	LEFT JOIN [dbo].[vComponente] co
+	LEFT JOIN [dbo].[tbComponente] co
 		ON im.IdComponente = co.Id
-WHERE c.Id is not null
+	LEFT JOIN [dbo].[tbFamilia] f
+		ON f.Id = co.IdFamilia
+WHERE c.Id is not null and im.IdComponente <> 0
 
 
 

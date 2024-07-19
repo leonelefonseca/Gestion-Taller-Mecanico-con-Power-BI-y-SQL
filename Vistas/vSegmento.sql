@@ -9,7 +9,6 @@ AS
 SELECT 
 	Id
 	,Identificador
-	--,IdMaquina
 	,'Seg. ' + [dbo].[fnGrupoSegmento](Identificador) Grupo
 	,TnsVidaEstimada
 FROM

@@ -93,19 +93,19 @@ En la base de datos se observa lo siguiente:
 
 - Se conecta Power BI con las vistas generadas en SSMS y se confecciona el modelo analítico de datos del tipo Header-Detail.
 ![Model](/images/ModeloAnalitico1.png)
-
+- Se incorpora, desde otra fuente de datos, la cantidad de cambios presupuestados a través del archivo [tbPresupuestado.csv](tbPresupuestado.csv).
 
 ## Screenshots
 
 A continuación se observan las capturas de pantallas del reporte.
 
-![Dashboard Screenshot](images/Screenshots/1-General.png)
-![Dashboard Screenshot](/images/Screenshots/2-AlteracionesOperativas.png)
-![Dashboard Screenshot](/images/Screenshots/3-EventosExternos.png)
-![Dashboard Screenshot](/images/Screenshots/4-IntervencionesDeMantenimiento.png)
-![Dashboard Screenshot](/images/Screenshots/5-Disponibilidad.png)
-![Dashboard Screenshot](/images/Screenshots/6-ABCDeFallas.png)
-![Dashboard Screenshot](/images/Screenshots/7-PropuestasDeMejora.png)
+![Dashboard Screenshot](images/Screenshots/1.General.png)
+![Dashboard Screenshot](/images/Screenshots/2.AlteracionesOperativas.png)
+![Dashboard Screenshot](/images/Screenshots/3.EventosExternos.png)
+![Dashboard Screenshot](/images/Screenshots/4.IntervencionesDeMantenimiento.png)
+![Dashboard Screenshot](/images/Screenshots/5.Disponibilidad.png)
+![Dashboard Screenshot](/images/Screenshots/6.ABCDeFallas.png)
+![Dashboard Screenshot](/images/Screenshots/7.PropuestasDeMejora.png)
 
 
 ## Otros Recursos

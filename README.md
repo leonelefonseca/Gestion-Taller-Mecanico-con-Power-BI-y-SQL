@@ -85,23 +85,34 @@ Se necesita contar con:
 
 En la base de datos se observa lo siguiente:
 - Las tablas obtenidas de la base de datos del cliente. 
-- La tabla calendario con su Stored Procedure correspondiente, necesaria para el análisis. Ver archivo...
-- La función para tomar el grupo de a partir del nombre del equipo. Ver archivo...
-- Las vistas para extraer solo aquellos datos necesarios para el análisis, permitiendo exportar los datos a la herramienta de visualización que se utilice (en este caso Power BI) y también para la gestión de permisos a otros usuarios en caso de ser necesario.
+- La tabla calendario con su Stored Procedure correspondiente, necesaria para el análisis. Ver el archivo [tablaCalendario.sql](https://github.com/leonelefonseca/Gestion-Taller-de-Mantenimiento-con-Power-BI-y-SQL/blob/main/Tabla%20Calendario/tablaCalendario.sql).
+- La función para tomar el grupo de a partir del nombre del equipo. Ver el archivo [Funciones.sql](https://github.com/leonelefonseca/Gestion-Taller-de-Mantenimiento-con-Power-BI-y-SQL/blob/main/Funciones/Funciones.sql).
+- Las vistas para extraer solo aquellos datos necesarios para el análisis, permitiendo exportar los datos a la herramienta de visualización que se utilice (en este caso Power BI) y también para la gestión de permisos a otros usuarios en caso de ser necesario. Ver los archivos [Vistas](https://github.com/leonelefonseca/Gestion-Taller-de-Mantenimiento-con-Power-BI-y-SQL/tree/main/Vistas).
 
 ### Modelo Analítico de Datos
 
-- Conectar Power BI con las vistas generadas en SSMS y se confecciona el modelo analítico de datos del tipo Header Details.
+- Se conecta Power BI con las vistas generadas en SSMS y se confecciona el modelo analítico de datos del tipo Header Details.
+![Model](/images/ModeloAnalitico1.png)
+
+
 ## Screenshots
 
+![Dashboard Screenshot](/images/Screenshots/1.General.png)
+![Dashboard Screenshot](/images/Screenshots/2.AlteracionesOperativas.png)
+![Dashboard Screenshot](/images/Screenshots/3.EventosExternos.png)
+![Dashboard Screenshot](/images/Screenshots/4.IntervencionesDeMantenimiento.png)
+![Dashboard Screenshot](/images/Screenshots/5.Disponibilidad.png)
+![Dashboard Screenshot](/images/Screenshots/6.ABCDeFallas.png)
+![Dashboard Screenshot](/images/Screenshots/7.PropuestasDeMejora.png)
 
 
 ## Otros Recursos
 
 - [readme.so](https://readme.so)
-- conventional commits
-- semver
-- Keep a changelog
+- [keepachangelog.com](https://keepachangelog.com/es-ES/1.1.0/)
+- [Versionado Semántico](https://semver.org/lang/es/)
+- [Storytelling With Data](https://www.storytellingwithdata.com/)
+
 
 ## Autores
 
